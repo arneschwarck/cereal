@@ -124,6 +124,9 @@ struct CarEvent @0x9b1657f34caf3ad3 {
 
     #ArnePilot
     longControlDisabled @97;
+    preKeepHandsOnWheel @98;
+    promptKeepHandsOnWheel @99;
+    keepHandsOnWheel @100;
   }
 }
 
