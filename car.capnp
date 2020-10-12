@@ -127,6 +127,9 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     preKeepHandsOnWheel @98;
     promptKeepHandsOnWheel @99;
     keepHandsOnWheel @100;
+    speedLimitActive @101;
+    speedLimitDecrease @102;
+    speedLimitIncrease @103;
   }
 }
 
@@ -213,7 +216,6 @@ struct CarState {
     speedOffset @3 :Float32;
     standstill @4 :Bool;
     nonAdaptive @5 :Bool;
-    speedLimit @6 :Float32;
   }
 
   enum GearShifter {

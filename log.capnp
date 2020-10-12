@@ -520,7 +520,7 @@ struct ControlsState @0x97ff69c53601abf1 {
 
   # speed limit control
   speedLimit @58 :Float32;
-  speedLimitControlState @59 :SpeedLimitControlState; 
+  speedLimitControlState @59 :SpeedLimitControlState;
 
   lateralControlState :union {
     indiState @52 :LateralINDIState;
@@ -748,7 +748,7 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   longitudinalPlanSource @15 :LongitudinalPlanSource;
 
   processingDelay @29 :Float32;
-  speedLimitControlState @32 :ControlsState.SpeedLimitControlState; 
+  speedLimitControlState @32 :ControlsState.SpeedLimitControlState;
 
   enum LongitudinalPlanSource {
     cruise @0;
@@ -1202,7 +1202,7 @@ struct DriverMonitoringState @0xb83cda094a1da284 {
   isRHDDEPRECATED @4 :Bool;
   isPreviewDEPRECATED @15 :Bool;
   rhdCheckedDEPRECATED @5 :Bool;
-  handsOnWheelState @16 :HandsOnWheelState;
+  handsOnWheelState @17 :HandsOnWheelState;
 
   enum HandsOnWheelState {
     none @0;          # hand on wheel monitoring inactive
