@@ -59,6 +59,7 @@ service_list = {
   #ArnePilot
   "dynamicFollowData": Service(8079, False, 20.),
   "dynamicFollowButton": Service(8081, False, 0.),  # 8080 is reverved
+  "dynamicGasButton": Service(8092, False, 0.),
 
   "testModel": Service(8040, False, 0.),
   "testLiveLocation": Service(8045, False, 0.),

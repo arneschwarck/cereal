@@ -1269,6 +1269,10 @@ struct DynamicFollowButton {
   status @0 :UInt16;
 }
 
+struct DynamicGasButton {
+  status @0 :UInt16;
+}
+
 struct Event {
   logMonoTime @0 :UInt64;  # nanoseconds
   valid @67 :Bool = true;
@@ -1369,5 +1373,6 @@ struct Event {
     #ArnePilot
     dynamicFollowData @79 :DynamicFollowData;
     dynamicFollowButton @80 :DynamicFollowButton;
+    dynamicGasButton @81 :DynamicGasButton;
   }
 }
