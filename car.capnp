@@ -190,6 +190,11 @@ struct CarState {
   leftBlindspot @33 :Bool; # Is there something blocking the left lane change
   rightBlindspot @34 :Bool; # Is there something blocking the right lane change
 
+  #ArnePilot: thanks to @cydia2020
+  engineRPM @37 :Float32; # Engine RPM
+  parkingLightON @38 :Bool; # Parking Light ON
+  headlightON @39 :Bool; # Low Beam ON
+
   struct WheelSpeeds {
     # optional wheel speeds
     fl @0 :Float32;
