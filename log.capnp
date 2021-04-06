@@ -519,8 +519,8 @@ struct ControlsState @0x97ff69c53601abf1 {
   canErrorCounter @57 :UInt32;
 
   # speed limit control
-  speedLimit @58 :Float32;
-  speedLimitControlState @59 :SpeedLimitControlState;
+  speedLimit @59 :Float32;
+  speedLimitControlState @60 :SpeedLimitControlState;
 
   lateralControlState :union {
     indiState @52 :LateralINDIState;
