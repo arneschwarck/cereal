@@ -130,6 +130,11 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     speedLimitActive @101;
     speedLimitDecrease @102;
     speedLimitIncrease @103;
+    manualSteeringRequired @104;
+    manualLongitudinalRequired @105;
+    silentPedalPressed @106;
+    silentButtonEnable @107;
+    silentBrakeHold @108;
   }
 }
 
@@ -200,6 +205,13 @@ struct CarState {
   engineRPM @37 :Float32; # Engine RPM
   parkingLightON @38 :Bool; # Parking Light ON
   headlightON @39 :Bool; # Low Beam ON
+  lkasEnabled @40 :Bool;
+  leftBlinkerOn @41 :Bool;
+  rightBlinkerOn @42 :Bool;
+  disengageByBrake @43 :Bool;
+  automaticLaneChange @44 :Bool;
+  belowLaneChangeSpeed @45 :Bool;
+  accEnabled @46 :Bool;
 
   struct WheelSpeeds {
     # optional wheel speeds
