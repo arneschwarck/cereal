@@ -1399,5 +1399,22 @@ struct Event {
     dynamicFollowData @79 :DynamicFollowData;
     dynamicFollowButton @80 :DynamicFollowButton;
     dynamicGasButton @81 :DynamicGasButton;
+    arneConf @82 :ArneConf;
   }
+}
+
+struct ArneConf {
+  apDashcam @1 :Bool;
+  apDashcamHoursStored @2 :UInt8;
+  apAutoShutdown @3 :Bool;
+  apUploader @4 :Bool;
+  apSteeringLimitAlert @5 :Bool;
+  apAutoLc @6 :Bool;
+  apAutoLcCont @7 :Bool;
+  apAutoLcMinMph @8 :Float32;
+  apAutoLcDelay @9 :Float32;
+  apToyotaLowestCruiseOverride @10 :Bool;
+  apToyotaLowestCruiseOverrideVego @11 :Bool;
+  apToyotaLowestCruiseOverrideAt @12 :Float32;
+  apToyotaLowestCruiseOverrideSpeed @13 :Float32;
 }

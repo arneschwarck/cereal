@@ -57,6 +57,7 @@ service_list = {
   "managerState": Service(8078, True, 2., 1),
 
   #ArnePilot
+  "arneConf": Service(8088, False, 2.),
   "dynamicFollowData": Service(8079, False, 20.),
   "dynamicFollowButton": Service(8081, False, 0.),  # 8080 is reverved
   "dynamicGasButton": Service(8092, False, 0.),
