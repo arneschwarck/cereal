@@ -1404,17 +1404,17 @@ struct Event {
 }
 
 struct ArneConf {
-  apDashcam @1 :Bool;
-  apDashcamHoursStored @2 :UInt8;
-  apAutoShutdown @3 :Bool;
-  apUploader @4 :Bool;
-  apSteeringLimitAlert @5 :Bool;
-  apAutoLc @6 :Bool;
-  apAutoLcCont @7 :Bool;
-  apAutoLcMinMph @8 :Float32;
-  apAutoLcDelay @9 :Float32;
-  apToyotaLowestCruiseOverride @10 :Bool;
-  apToyotaLowestCruiseOverrideVego @11 :Bool;
-  apToyotaLowestCruiseOverrideAt @12 :Float32;
-  apToyotaLowestCruiseOverrideSpeed @13 :Float32;
+  apDashcam @0 :Bool;
+  apDashcamHoursStored @1 :UInt8;
+  apAutoShutdown @2 :Bool;
+  apUploader @3 :Bool;
+  apSteeringLimitAlert @4 :Bool;
+  apAutoLc @5 :Bool;
+  apAutoLcCont @6 :Bool;
+  apAutoLcMinMph @7 :Float32;
+  apAutoLcDelay @8 :Float32;
+  apToyotaLowestCruiseOverride @9 :Bool;
+  apToyotaLowestCruiseOverrideVego @10 :Bool;
+  apToyotaLowestCruiseOverrideAt @11 :Float32;
+  apToyotaLowestCruiseOverrideSpeed @12 :Float32;
 }
