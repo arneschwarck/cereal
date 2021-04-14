@@ -523,6 +523,8 @@ struct ControlsState @0x97ff69c53601abf1 {
   # speed limit control
   speedLimit @59 :Float32;
   speedLimitControlState @60 :SpeedLimitControlState;
+  # turn control
+  distToTurn @61 :Float32;
 
   lateralControlState :union {
     indiState @52 :LateralINDIState;
@@ -752,6 +754,7 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   processingDelay @29 :Float32;
   speedLimitControlState @32 :ControlsState.SpeedLimitControlState;
   speedLimit @33 :Float32;
+  distToTurn @34 :Float32;
 
   enum LongitudinalPlanSource {
     cruise @0;
