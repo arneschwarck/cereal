@@ -1303,6 +1303,15 @@ struct DynamicGasButton {
   status @0 :UInt16;
 }
 
+struct TrafficModelRaw {
+  prediction @0 :List(Float32);
+}
+
+struct TrafficModelEvent {
+  status @0 :Text;
+  confidence @1 :Float32;
+}
+
 struct Event {
   logMonoTime @0 :UInt64;  # nanoseconds
   valid @67 :Bool = true;
@@ -1404,5 +1413,8 @@ struct Event {
     dynamicFollowData @79 :DynamicFollowData;
     dynamicFollowButton @80 :DynamicFollowButton;
     dynamicGasButton @81 :DynamicGasButton;
+
+    trafficModelRaw @82 :TrafficModelRaw;
+    trafficModelEvent @83 :TrafficModelEvent;
   }
 }
