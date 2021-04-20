@@ -70,15 +70,11 @@ services = {
   "testJoystick": (False, 0.),
 
   #ArnePilot
-  "dynamicFollowData": Service(8079, False, 20.),
-  "dynamicFollowButton": Service(8081, False, 0.),  # 8080 is reverved
-  "dynamicGasButton": Service(8092, False, 0.),
-  "trafficModelRaw": Service(8093, False, 0.),
-  "trafficModelEvent": Service(8094, False, 0.),
-
-  "testModel": Service(8040, False, 0.),
-  "testLiveLocation": Service(8045, False, 0.),
-  "testJoystick": Service(8056, False, 0.),
+  "dynamicFollowData": (False, 20.),
+  "dynamicFollowButton": (False, 0.),  # 8080 is reverved
+  "dynamicGasButton": (False, 0.),
+  "trafficModelRaw": (False, 0.),
+  "trafficModelEvent": (False, 0.),
 
 }
 service_list = {name: Service(new_port(idx), *vals) for  # type: ignore
