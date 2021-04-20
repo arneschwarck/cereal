@@ -124,13 +124,13 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     steerTempUnavailableMuteDEPRECATED @35;
 
     #ArnePilot
-    longControlDisabled @97;
-    preKeepHandsOnWheel @98;
-    promptKeepHandsOnWheel @99;
-    keepHandsOnWheel @100;
-    speedLimitActive @101;
-    speedLimitDecrease @102;
-    speedLimitIncrease @103;
+    longControlDisabled @98;
+    preKeepHandsOnWheel @99;
+    promptKeepHandsOnWheel @100;
+    keepHandsOnWheel @101;
+    speedLimitActive @102;
+    speedLimitDecrease @103;
+    speedLimitIncrease @104;
   }
 }
 
