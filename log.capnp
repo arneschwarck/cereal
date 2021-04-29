@@ -525,6 +525,8 @@ struct ControlsState @0x97ff69c53601abf1 {
   speedLimitControlState @60 :SpeedLimitControlState;
   # turn control
   distToTurn @61 :Float32;
+  turnSpeed @62 :Float32;
+  turnSpeedControlState @63 :SpeedLimitControlState;
 
   lateralControlState :union {
     indiState @52 :LateralINDIState;
@@ -755,6 +757,8 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   speedLimitControlState @32 :ControlsState.SpeedLimitControlState;
   speedLimit @33 :Float32;
   distToTurn @34 :Float32;
+  turnSpeed @35 :Float32;
+  turnSpeedControlState @36 :ControlsState.SpeedLimitControlState;
 
   enum LongitudinalPlanSource {
     cruise @0;
@@ -764,6 +768,7 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
     model @4;
     turn @5;
     limit @6;
+    turnlimit @7;
   }
 
   # deprecated
@@ -1260,6 +1265,21 @@ struct LiveMapDataDEPRECATED {
   mapValid @11 :Bool;
 }
 
+struct LiveMapData {
+  speedLimitValid @0 :Bool;
+  speedLimit @1 :Float32;
+  speedLimitAheadValid @2 :Bool;
+  speedLimitAhead @3 :Float32;
+  speedLimitAheadDistance @4 :Float32;
+  turnSpeedLimitValid @5 :Bool;
+  turnSpeedLimit @6 :Float32;
+  turnSpeedLimitEndDistance @7 :Float32;
+  turnSpeedLimitAheadValid @8 :Bool;
+  turnSpeedLimitAhead @9 :Float32;
+  turnSpeedLimitAheadDistance @10 :Float32;
+  lastGpsTimestamp @11 :Int64;  # Milliseconds since January 1, 1970.
+}
+
 struct CameraOdometry {
   frameId @4 :UInt32;
   timestampEof @5 :UInt64;
@@ -1352,6 +1372,7 @@ struct Event {
     driverMonitoringState @71: DriverMonitoringState;
     liveLocationKalman @72 :LiveLocationKalman;
     modelV2 @75 :ModelDataV2;
+    liveMapData @79: LiveMapData;
 
     # camera stuff, each camera state has a matching encode idx
     roadCameraState @2 :FrameData;
@@ -1410,11 +1431,11 @@ struct Event {
     uiLayoutStateDEPRECATED @57 :Legacy.UiLayoutState;
 
     #ArnePilot
-    dynamicFollowData @79 :DynamicFollowData;
-    dynamicFollowButton @80 :DynamicFollowButton;
-    dynamicGasButton @81 :DynamicGasButton;
+    dynamicFollowData @80 :DynamicFollowData;
+    dynamicFollowButton @81 :DynamicFollowButton;
+    dynamicGasButton @82 :DynamicGasButton;
 
-    trafficModelRaw @82 :TrafficModelRaw;
-    trafficModelEvent @83 :TrafficModelEvent;
+    trafficModelRaw @83 :TrafficModelRaw;
+    trafficModelEvent @84 :TrafficModelEvent;
   }
 }

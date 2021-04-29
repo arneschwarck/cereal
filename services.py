@@ -70,6 +70,7 @@ services = {
   "testJoystick": (False, 0.),
 
   #ArnePilot
+  "liveMapData": (True, 0.),
   "dynamicFollowData": (False, 20.),
   "dynamicFollowButton": (False, 0.),  # 8080 is reverved
   "dynamicGasButton": (False, 0.),
