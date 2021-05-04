@@ -527,6 +527,9 @@ struct ControlsState @0x97ff69c53601abf1 {
   distToTurn @61 :Float32;
   turnSpeed @62 :Float32;
   turnSpeedControlState @63 :SpeedLimitControlState;
+  # vision turn controll
+  turnControllerState @64 :TurnControllerState;
+  turnAcc @65 :Float32;
 
   lateralControlState :union {
     indiState @52 :LateralINDIState;
@@ -554,6 +557,13 @@ struct ControlsState @0x97ff69c53601abf1 {
     tempInactive @1; # User wants to ignore speed limit until it changes.
     adapting @2; # Reducing speed to match new speed limit.
     active @3; # Cruising at speed limit.
+  }
+
+  enum TurnControllerState {
+    disabled @0; # No predicted substancial turn on vision range or feature disabled.
+    entering @1; # A subsantial turn is predicted ahead, adapting speed to turn confort levels.
+    turning @2; # Actively turning. Managing acceleration to provide a roll on turn feeling.
+    leaving @3; # Road ahead straightens. Start to allow positive acceleration.
   }
 
   enum AlertStatus {
@@ -754,11 +764,16 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   longitudinalPlanSource @15 :LongitudinalPlanSource;
 
   processingDelay @29 :Float32;
-  speedLimitControlState @32 :ControlsState.SpeedLimitControlState;
-  speedLimit @33 :Float32;
-  distToTurn @34 :Float32;
-  turnSpeed @35 :Float32;
-  turnSpeedControlState @36 :ControlsState.SpeedLimitControlState;
+
+  turnControllerState @32 : ControlsState.TurnControllerState;
+  turnAcc @33 :Float32;
+
+  speedLimitControlState @34 :ControlsState.SpeedLimitControlState;
+  speedLimit @35 :Float32;
+
+  distToTurn @36 :Float32;
+  turnSpeed @37 :Float32;
+  turnSpeedControlState @38 :ControlsState.SpeedLimitControlState;
 
   enum LongitudinalPlanSource {
     cruise @0;
