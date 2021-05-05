@@ -125,13 +125,13 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     startupOneplusDEPRECATED @82;
 
     #ArnePilot
-    longControlDisabled @98;
-    preKeepHandsOnWheel @99;
-    promptKeepHandsOnWheel @100;
-    keepHandsOnWheel @101;
-    speedLimitActive @102;
-    speedLimitDecrease @103;
-    speedLimitIncrease @104;
+    longControlDisabled @99;
+    preKeepHandsOnWheel @100;
+    promptKeepHandsOnWheel @101;
+    keepHandsOnWheel @102;
+    speedLimitActive @103;
+    speedLimitDecrease @104;
+    speedLimitIncrease @105;
   }
 }
 
