@@ -306,6 +306,7 @@ struct DeviceState @0xa4d8b5af2aa492eb {
   thermalStatus @14 :ThermalStatus;
 
   ipAddr @32 :Text;
+  wifiIpAddress @33 :Text;
 
   enum ThermalStatus {
     green @0;
