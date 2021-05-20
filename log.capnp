@@ -834,6 +834,8 @@ struct LateralPlan @0xe1e9318e2ae8b51e {
   desire @17 :Desire;
   laneChangeState @18 :LaneChangeState;
   laneChangeDirection @19 :LaneChangeDirection;
+  autoLaneChangeEnabled @26 :Bool;
+  autoLaneChangeTimer @27 :Int8;
 
   # curvature is in rad/m
   curvature @22 :Float32;
