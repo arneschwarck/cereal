@@ -133,6 +133,7 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     speedLimitActive @104;
     speedLimitDecrease @105;
     speedLimitIncrease @106;
+    autoLaneChange @107;
   }
 }
 
@@ -203,6 +204,7 @@ struct CarState {
   engineRPM @37 :Float32; # Engine RPM
   parkingLightON @38 :Bool; # Parking Light ON
   headlightON @39 :Bool; # Low Beam ON
+  lightSensor @40 :Float32; # Auto Headlight Sensor
 
   struct WheelSpeeds {
     # optional wheel speeds
