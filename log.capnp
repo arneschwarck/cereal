@@ -308,7 +308,6 @@ struct DeviceState @0xa4d8b5af2aa492eb {
   ambientTempC @30 :Float32;
   thermalStatus @14 :ThermalStatus;
 
-  ipAddr @32 :Text;
   wifiIpAddress @33 :Text;
 
   enum ThermalStatus {

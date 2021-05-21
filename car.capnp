@@ -127,14 +127,14 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     startupOneplusDEPRECATED @82;
 
     #ArnePilot
-    longControlDisabled @100;
-    preKeepHandsOnWheel @101;
-    promptKeepHandsOnWheel @102;
-    keepHandsOnWheel @103;
-    speedLimitActive @104;
-    speedLimitDecrease @105;
-    speedLimitIncrease @106;
-    autoLaneChange @107;
+    longControlDisabled @101;
+    preKeepHandsOnWheel @102;
+    promptKeepHandsOnWheel @103;
+    keepHandsOnWheel @104;
+    speedLimitActive @105;
+    speedLimitDecrease @106;
+    speedLimitIncrease @107;
+    autoLaneChange @108;
   }
 }
 
@@ -159,6 +159,7 @@ struct CarState {
   # brake pedal, 0.0-1.0
   brake @5 :Float32;      # this is user pedal only
   brakePressed @6 :Bool;  # this is user pedal only
+  brakeLights @19 :Bool;
 
   # steering wheel
   steeringAngleDeg @7 :Float32;
@@ -259,7 +260,6 @@ struct CarState {
   }
 
   errorsDEPRECATED @0 :List(CarEvent.EventName);
-  brakeLightsDEPRECATED @19 :Bool;
 }
 
 # ******* radar state @ 20hz *******
