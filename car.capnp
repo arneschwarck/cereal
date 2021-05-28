@@ -107,6 +107,8 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     speedLimitActive @100;
     speedLimitDecrease @101;
     speedLimitIncrease @102;
+    #kumar
+    longControlDisabled @103;
 
     radarCanErrorDEPRECATED @15;
     radarCommIssueDEPRECATED @67;
@@ -192,6 +194,11 @@ struct CarState {
   # blindspot sensors
   leftBlindspot @33 :Bool; # Is there something blocking the left lane change
   rightBlindspot @34 :Bool; # Is there something blocking the right lane change
+
+  #kumar: thanks to @cydia2020
+  engineRPM @37 :Float32; # Engine RPM
+  parkingLightON @38 :Bool; # Parking Light ON
+  headlightON @39 :Bool; # Low Beam ON
 
   struct WheelSpeeds {
     # optional wheel speeds

@@ -770,7 +770,7 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   turnControllerState @32 : ControlsState.TurnControllerState;
   turnAcc @33 :Float32;
 
-  speedLimitControlState @34 :ControlsState.SpeedLimitControlState; 
+  speedLimitControlState @34 :ControlsState.SpeedLimitControlState;
   speedLimit @35 :Float32;
   distToSpeedLimit @36 :Float32;
   isMapSpeedLimit @37 :Bool;
@@ -1331,6 +1331,20 @@ struct ManagerState {
   }
 }
 
+#kumar
+struct DynamicGasButton {
+  status @0 :UInt16;
+}
+
+struct TrafficModelRaw {
+  prediction @0 :List(Float32);
+}
+
+struct TrafficModelEvent {
+  status @0 :Text;
+  confidence @1 :Float32;
+}
+
 struct Event {
   logMonoTime @0 :UInt64;  # nanoseconds
   valid @67 :Bool = true;
@@ -1428,5 +1442,10 @@ struct Event {
     kalmanOdometryDEPRECATED @65 :Legacy.KalmanOdometry;
     gpsLocationDEPRECATED @21 :GpsLocationData;
     uiLayoutStateDEPRECATED @57 :Legacy.UiLayoutState;
+
+    #kumar
+    dynamicGasButton @80 :DynamicGasButton;
+    trafficModelRaw @81 :TrafficModelRaw;
+    trafficModelEvent @82 :TrafficModelEvent;
   }
 }
